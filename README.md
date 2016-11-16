@@ -5,12 +5,11 @@ Installation
 _______________________________________________________________
 
 This client uses Node.js in its simplest form outside of any Node js framework (ex Express).  This allows it to integrate seamlessly with 
-any current Node implementation. Therefore, importing the modules is really at the discretion of the developer.  To keep it simple, add
-the following export module function to your createServer function inside your app.js:
+any current Node implementation. Therefore, importing the included modules is really at the discretion of the developer.  For basic illustrative purposes and to keep it simple, add the following export module function to your createServer function inside your app.js:
 
+```javascript
 var apiFilter = require('./apiFilter');
 
-(Sample Code)
 module.exports = {
 		handleRequest: function(request, response) {			
 			  apiFilter.initialize();
@@ -31,3 +30,9 @@ module.exports = {
 			  }
 		}
 }
+```
+
+Then include the following js files in the same directory as your app.js.  (This can be moved to other directories as necessary keeping in mind modifying the 'require' imports as applicable).
+- apiFilter.js
+- filterConfig.js
+- apiPublish.js
