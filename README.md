@@ -37,6 +37,7 @@ Then include the following js files in the same directory as your app.js.  (This
 - apiPublish.js
 
 NOTE: The configuration options should be applied via the filterConfig.js.  The current filter options are as follows:
+```javascript
 module.exports = {		
 		name: "apifilter",
 		order: 1,
